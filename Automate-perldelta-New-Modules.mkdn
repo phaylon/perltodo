@@ -1,0 +1,8 @@
+
+## Automate the "new modules" section
+
+Each `perldelta` contains a section that lists what modules changed.  This
+could be generated automatically by using Module::CoreList.
+
+Look at `Porting/release_managers_guide.pod` for information on writing a
+perldelta, as well as `Porting/perldelta_template.pod`
