@@ -1,0 +1,7 @@
+
+## profile `installman`
+
+The `installman` script is slow. All it is doing text processing, which we're
+told is something Perl is good at. So it would be nice to know what it is doing
+that is taking so much CPU, and where possible address it.
+
