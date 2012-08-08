@@ -4,5 +4,12 @@
 Each `perldelta` contains a section that lists what modules changed.  This
 could be generated automatically by using Module::CoreList.
 
+In fact, this has been begun with the program `Porting/corelist-perldelta.pl`.
+
 Look at `Porting/release_managers_guide.pod` for information on writing a
 perldelta, as well as `Porting/perldelta_template.pod`
+
+Determine whether the existing program works.  Test it a couple times on
+different versions and comare what it says with the output of `corelist
+--diff`.  Add documentation of how to use it to the release mangaer's guide,
+where the current section on updating the module-updates delta is.
