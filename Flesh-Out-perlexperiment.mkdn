@@ -1,0 +1,14 @@
+
+## Experiment!
+
+`pod/perlexperiment.pod` can be really useful if there was a bit more evidence,
+paving the way for future deprecations and policy.
+
+Go through perlexperiment (in the blead branch!) and, for each feature, check
+whether the feature is announced as an experimental feature in the perldelta
+for the version cited.  If so, add that as a note.  If not, find out where it
+was announced as experimental and note that.
+
+For features that were promoted to non-experimental or removed entirely, make a
+note of that, too.
+
