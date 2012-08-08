@@ -1,0 +1,13 @@
+
+## What's this button do?
+
+The `./Porting` directory in perl.git contains a bunch of stuff used to build,
+test, or torture perl.  There are a lot of files in there.
+
+Add a README (or something) file to ./Porting that lists each file and its
+purpose.  If the program isn't mentioned in
+`Porting/release_managers_guide.pod`, figure out where, if anywhere, it *is*
+mentioned.  If you can't figure it out, flag it as maybe just being cruft.
+
+For extra credit, add a test to `t/porting` that asserts that every file in
+`./Porting` is in the explanatory file.
