@@ -1,5 +1,5 @@
 
-## THE TASK
+# What does only CPANPLUS use?
 
 CPANPLUS did not replace CPAN.pm as the CPAN client of choice.  CPANPLUS was
 made part of the core in 5.10.0 to be the preferred replacement for CPAN.
