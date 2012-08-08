@@ -1,0 +1,62 @@
+
+## Stay out of perl lib!
+
+It used to be that the search order of `@INC` was perl, then site.   If you
+installed a new version of something from CPAN, it would be installed into
+site, by default.  That meant that if it was in core, you'd never see the new
+version, because the core code was in the "perl" lib.
+
+To work around this, libraries found in both core and CPAN overrode their
+install location to go into perl lib.  This was a lousy situation.  Now it's
+over!  Perl now looks in site first.
+
+...but lots of dual-life libraries have not been updated to install to site as
+usual!  They need fixing.
+
+Libraries that are released primarily on CPAN (i.e., "upstream CPAN" libraries)
+need to have support requests filed against them.  Include a patch!  For most
+libraries, this means using rt.cpan.org, but don't use it blindly.  Do what the
+author wants.  Also, check to see that it hasn't already been filed or resolved
+first.
+
+Libraries that are released primarily via the core perl distribution need to
+have patches sent to the core.  Use perlbug or contact perl5-porters@perl.org
+
+In most cases, libraries will be using ExtUtils::MakeMaker.  They should end up
+with a line like this:
+
+    INSTALLDIRS => ($] < 5.011 ? 'perl' : 'site'),
+
+They're broken if they currently just say `INSTALLDIRS => 'perl'`
+
+## Partial List
+
+Here are some seemingly broken ones:
+
+    CPANPLUS
+    Compress-Raw-Bzip2
+    Compress-Raw-Zlib
+    DB_File
+    Devel-PPPort
+    Digest-SHA
+    Encode
+    ExtUtils-CBuilder
+    ExtUtils-MakeMaker
+    IO
+    IO-Compress
+    IPC-SysV
+    List-Util
+    Math-Complex
+    Mime-Base64
+    Module-Build
+    Module-CoreList
+    Module-Plugable
+    Storable
+    Time-HiRes
+    Time-Piece
+    Unicode-Collate
+    Unicode-Normalize
+    Win32
+    Win32API-File
+    lib
+
