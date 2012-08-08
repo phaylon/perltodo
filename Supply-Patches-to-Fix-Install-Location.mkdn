@@ -23,7 +23,7 @@ Libraries that are released primarily via the core perl distribution need to
 have patches sent to the core.  Use perlbug or contact perl5-porters@perl.org
 
 In most cases, libraries will be using ExtUtils::MakeMaker.  They should end up
-with a line like this:
+with a line something like this:
 
     INSTALLDIRS => ($] < 5.011 ? 'perl' : 'site'),
 
