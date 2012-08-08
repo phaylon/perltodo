@@ -1,0 +1,15 @@
+
+## Migrate t/ from custom TAP generation
+
+Many tests below `./t` still generate TAP by "hand", rather than using library
+functions. As explained in `perlhack/TESTING`, tests in `./t` are
+written in a particular way to test that more complex constructions actually
+work before using them routinely. Hence they don't use Test::More, but
+instead there is an intentionally simpler library, `./t/test.pl`. However,
+quite a few tests in `./t` have not been refactored to use it. Refactoring
+any of these tests, one at a time, is a useful thing TODO.
+
+The subdirectories `base`, `cmd` and `comp`, which contain the most
+basic tests, **must be excluded** from this task.
+
+
