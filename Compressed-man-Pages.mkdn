@@ -1,0 +1,6 @@
+
+## Compress!
+
+The `installman` script found in perl.git should get a switch to install
+compressed man pages.  If possible, plan ahead for how different systems expect
+compressed man pages to get installed.
