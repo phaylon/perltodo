@@ -1,0 +1,30 @@
+
+## THE TASK
+
+CPANPLUS did not replace CPAN.pm as the CPAN client of choice.  CPANPLUS was
+made part of the core in 5.10.0 to be the preferred replacement for CPAN.
+Since this hasn't happened, let's look at taking CPANPLUS out of the core.
+
+When CPANPLUS came into the core, it brought a bunch of prerequisites with it:
+Term::UI, Log::Message, IPC::Cmd, etc.  They're some subset of the things
+listed by:
+
+    corelist --diff 5.8.8 5.10.0 | grep '(absent) '
+
+Figure out what libraries in core were brought in only to support CPANPLUS and
+which are not now used by other code.  You can start by looking at libraries
+that are (a) required by CPANPLUS and (b) were added to core in 5.10.0.
+
+Then you'll need to see whether other code in the core uses those libraries.
+
+Remember to check recursively!  CPANPLUS might have brought in Xyz which, in
+turn, brought in Abc.
+
+## BONUS CREDIT
+
+Write a tool that uses whatever resources you want — MetaCPAN, CPANDB, etc. —
+to graph all the dependencies of dual-lifed* modules in core so that it's clear
+what depends on what.
+
+`*` Dual-lifed code means that it's both on the CPAN and in perl.git.  That
+means it's code in the `./dist` or `./cpan` directories in perl.git.
