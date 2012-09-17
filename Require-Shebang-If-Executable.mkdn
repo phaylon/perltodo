@@ -1,0 +1,11 @@
+
+## If you say we can execute it, give a shebang.
+
+Well, at least if it's a shell script.
+
+For example, `Porting/perlhist_calculate.pl` has no shebang, but is +x.
+When I tried to run it, it complained.
+
+This should be a porting test (in t/Porting) so that we can't screw this up
+again.  Once that test works, *then* we should fix all the violations.
+

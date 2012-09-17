@@ -1,0 +1,16 @@
+
+# How big was this perl, again?
+
+It should not be permissible to ship a "blead-final" release without updating
+the "sizes of selected releases" in `perlhist`.  In other words, 5.18.0 should
+not ship unless it includes the entries for 5.18.0.
+
+Yes, sure, there's a tiny bit of circularity there.  We'll live with the few
+bytes of discrepancy.
+
+The program `Porting/perlhist_calculate.pl` calculates these data.  It should
+*not* let you run it if you've already built perl, because it will get `./lib`
+all wrong.
+
+There should be a porting test (in `t/Porting`) to require that the data are in
+perlhist if the version is 5.even.0.
