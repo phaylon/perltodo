@@ -29,34 +29,101 @@ with a line something like this:
 
 They're broken if they currently just say `INSTALLDIRS => 'perl'`
 
-## Partial List
+## (Hopefully) complete list
 
 Here are some seemingly broken ones:
 
-    CPANPLUS
-    Compress-Raw-Bzip2
-    Compress-Raw-Zlib
-    DB_File
-    Devel-PPPort
-    Digest-SHA
-    Encode
-    ExtUtils-CBuilder
-    ExtUtils-MakeMaker
-    IO
-    IO-Compress
-    IPC-SysV
-    List-Util
-    Math-Complex
-    Mime-Base64
-    Module-Build
-    Module-CoreList
-    Module-Plugable
-    Storable
-    Time-HiRes
-    Time-Piece
-    Unicode-Collate
-    Unicode-Normalize
-    Win32
-    Win32API-File
-    lib
+In progress:
 
+    CPANPLUS                (patch in RT#57201)
+    Compress-Raw-Bzip2      (patch in RT#79811)
+    Compress-Raw-Zlib       (patch in RT#79812)
+    DB_File                 (patch in RT#70420)
+    Devel-PPPort            (patch in RT#79814)
+    Digest-SHA              (RT#79815 applied, awaiting release)
+    Encode                  (patch in RT#79794)
+    ExtUtils-CBuilder       (fixed)
+    ExtUtils-MakeMaker      (patch on mailinglist)
+    IO-Compress             (patch in RT#79820)
+    IPC-SysV                (patch in RT#79821)
+    List-Util               (patch in RT#67667)
+    Math-Complex            (patch in RT#79795)
+    MIME-Base64             (patch in RT#79796)
+    Module-Build            (fixed)
+    Module-CoreList         (fixed)
+    Module-Pluggable        (fixed only on CPAN)
+    Time-HiRes              (patch in RT#79797)
+    Time-Piece              (patch in RT#79799)
+    Unicode-Collate         (fixed)
+    Unicode-Normalize       (fixed)
+    Win32                   (fixed)
+    Win32API-File           (patch in RT#79802)s
+
+Managed on CPAN:
+
+    Archive-Extract
+    Archive-Tar
+    autodie
+    AutoLoader
+    B-Debug
+    CGI
+    CPAN
+    CPANPLUS-Dist-Build
+    Digest
+    Digest-MD5
+    File-Fetch
+    File-Path
+    File-Temp
+    Filter
+    Getopt-Long
+    IO-Zlib
+    IPC-Cmd
+    libnet
+    Locale-Codes
+    Locale-Maketext-Simple
+    Log-Message
+    Log-Message-Simple
+    Module-Load
+    Module-Loaded
+    NEXT
+    Object-Accessor
+    Package-Constants
+    Params-Check
+    parent
+    Pod-LaTeX
+    podlators
+    Pod-Parser
+    Pod-Perldoc
+    Pod-Simple
+    Term-ANSIColor
+    Term-Cap
+    Term-UI
+    Test
+    Test-Harness
+    Test-Simple
+    Text-Balanced
+    Text-ParseWords
+    Text-Soundex
+    Text-Tabs+Wrap (Text-Tabs)
+    Tie-RefHash
+
+Managed in Core:
+
+    Attribute-Handlers      (cpan)
+    base                    (cpan)
+    bignum                  (cpan)
+    B-Lint                  (cpan)
+    constant                (cpan)
+    PathTools (Cwd)         (cpan)
+    Data-Dumper             (cpan)
+    ExtUtils-Install        (cpan)
+    Filter-Simple           (cpan)
+    if                      (cpan)
+    IO                      (core & cpan)
+    lib                     (core & cpan)
+    Math-BigInt             (cpan)
+    Math-BigInt-FastCalc    (cpan)
+    Math-BigRat             (cpan)
+    Net-Ping                (cpan)
+    SelfLoader              (cpan)
+    Storable                (core & cpan)
