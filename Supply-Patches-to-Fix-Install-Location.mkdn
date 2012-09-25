@@ -40,7 +40,7 @@ In progress:
     Compress-Raw-Zlib       (patch in RT#79812)
     DB_File                 (patch in RT#70420)
     Devel-PPPort            (patch in RT#79814)
-    Digest-SHA              (RT#79815 applied, awaiting release)
+    Digest-SHA              (fixed)
     Encode                  (patch in RT#79794)
     ExtUtils-CBuilder       (fixed)
     ExtUtils-MakeMaker      (patch on mailinglist)
